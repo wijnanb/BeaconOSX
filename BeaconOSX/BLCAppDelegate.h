@@ -11,5 +11,6 @@
 @interface BLCAppDelegate : NSObject <NSApplicationDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
+@property (weak) IBOutlet NSTextField *lblUuid;
 
 @end
