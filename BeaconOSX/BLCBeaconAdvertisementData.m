@@ -14,12 +14,12 @@
     self = [super init];
     
     if (self) {
-        self.proximityUUID = proximityUUID;
+        self.proximityUUID = [[NSUUID alloc]initWithUUIDString:@"10D39AE7-020E-4467-9CB2-DD36366F899D"];
         self.major = major;
         self.minor = minor;
         self.measuredPower = power;
     }
-
+    
     return self;
 }
 
