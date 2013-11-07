@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		62CF746C182C2C1700A84C1A /* ibeacon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 62CF746B182C2C1700A84C1A /* ibeacon.jpg */; };
 		C9747CC81823FF980031E32F /* BLCBeaconAdvertisementData.m in Sources */ = {isa = PBXBuildFile; fileRef = C9747CC71823FF980031E32F /* BLCBeaconAdvertisementData.m */; };
 		C9747CC91823FF980031E32F /* BLCBeaconAdvertisementData.m in Sources */ = {isa = PBXBuildFile; fileRef = C9747CC71823FF980031E32F /* BLCBeaconAdvertisementData.m */; };
 		C9ACECFD1823C3B7000FFBFA /* IOBluetoothUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9ACECFC1823C3B7000FFBFA /* IOBluetoothUI.framework */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		62CF746B182C2C1700A84C1A /* ibeacon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ibeacon.jpg; sourceTree = "<group>"; };
 		C9747CC61823FF980031E32F /* BLCBeaconAdvertisementData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLCBeaconAdvertisementData.h; sourceTree = "<group>"; };
 		C9747CC71823FF980031E32F /* BLCBeaconAdvertisementData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLCBeaconAdvertisementData.m; sourceTree = "<group>"; };
 		C9ACECFC1823C3B7000FFBFA /* IOBluetoothUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOBluetoothUI.framework; path = System/Library/Frameworks/IOBluetoothUI.framework; sourceTree = SDKROOT; };
@@ -127,6 +129,7 @@
 		C9B7A3061823BEB900D61F59 /* BeaconOSX */ = {
 			isa = PBXGroup;
 			children = (
+				62CF746B182C2C1700A84C1A /* ibeacon.jpg */,
 				C9B7A3121823BEB900D61F59 /* BLCAppDelegate.h */,
 				C9B7A3131823BEB900D61F59 /* BLCAppDelegate.m */,
 				C9B7A3151823BEB900D61F59 /* MainMenu.xib */,
@@ -246,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9B7A30B1823BEB900D61F59 /* InfoPlist.strings in Resources */,
+				62CF746C182C2C1700A84C1A /* ibeacon.jpg in Resources */,
 				C9B7A3191823BEB900D61F59 /* Images.xcassets in Resources */,
 				C9B7A3111823BEB900D61F59 /* Credits.rtf in Resources */,
 				C9B7A3171823BEB900D61F59 /* MainMenu.xib in Resources */,

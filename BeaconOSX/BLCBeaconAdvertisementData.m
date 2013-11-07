@@ -14,7 +14,7 @@
     self = [super init];
     
     if (self) {
-        self.proximityUUID = [[NSUUID alloc]initWithUUIDString:@"10D39AE7-020E-4467-9CB2-DD36366F899D"];
+        self.proximityUUID = [[NSUUID alloc]initWithUUIDString:@"496E176B-346F-456D-88F1-26D7C2A113AF"];
         self.major = major;
         self.minor = minor;
         self.measuredPower = power;
@@ -25,7 +25,7 @@
 
 
 - (NSDictionary *)beaconAdvertisement {
-    NSString *beaconKey = @"kCBAdvDataAppleBeaconKey";
+    NSString *beaconKey = @"kCBAdvDataAppleBeaconKey"; // leave this as kCBAdvDataAppleBeaconKey
     
     unsigned char advertisementBytes[21] = {0};
     
