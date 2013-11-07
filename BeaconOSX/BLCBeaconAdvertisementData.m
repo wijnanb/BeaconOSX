@@ -14,7 +14,8 @@
     self = [super init];
     
     if (self) {
-        self.proximityUUID = [[NSUUID alloc]initWithUUIDString:@"496E176B-346F-456D-88F1-26D7C2A113AF"];
+        NSString *uuid = @"496E176B-346F-456D-88F1-26D7C2A113AF";
+        self.proximityUUID = [[NSUUID alloc]initWithUUIDString:uuid];
         self.major = major;
         self.minor = minor;
         self.measuredPower = power;

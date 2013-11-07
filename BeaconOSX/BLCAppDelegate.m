@@ -31,7 +31,6 @@
     if (peripheral.state == CBPeripheralManagerStatePoweredOn) {
         
         NSUUID *proximityUUID = [[NSUUID alloc] initWithUUIDString:@"A6C4C5FA-A8DD-4BA1-B9A8-A240584F02D3"];
-        
         BLCBeaconAdvertisementData *beaconData = [[BLCBeaconAdvertisementData alloc] initWithProximityUUID:proximityUUID
                                                                                                      major:5
                                                                                                      minor:5000
@@ -39,6 +38,8 @@
 
         
         [_manager startAdvertising:beaconData.beaconAdvertisement];
+        
+        [self.lblUuid setStringValue:[beaconData.proximityUUID UUIDString]];
     }
 }
 
