@@ -15,6 +15,7 @@
 @interface BLCAppDelegate () <CBPeripheralManagerDelegate>
 
 @property (nonatomic,strong) CBPeripheralManager *manager;
+@property (nonatomic,strong) NSUUID *uuid;
 
 @end
 
@@ -22,25 +23,39 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     
+    [self.lblBroadcasting setHidden:YES];
+    
     _manager = [[CBPeripheralManager alloc] initWithDelegate:self
                                                        queue:nil];
+    _uuid = [[NSUUID alloc] initWithUUIDString:@"A6C4C5FA-A8DD-4BA1-B9A8-A240584F02D3"];
 }
 
 - (void)peripheralManagerDidUpdateState:(CBPeripheralManager *)peripheral {
     
     if (peripheral.state == CBPeripheralManagerStatePoweredOn) {
-        
-        NSUUID *proximityUUID = [[NSUUID alloc] initWithUUIDString:@"A6C4C5FA-A8DD-4BA1-B9A8-A240584F02D3"];
-        BLCBeaconAdvertisementData *beaconData = [[BLCBeaconAdvertisementData alloc] initWithProximityUUID:proximityUUID
-                                                                                                     major:5
-                                                                                                     minor:5000
-                                                                                             measuredPower:-59];
-
-        
-        [_manager startAdvertising:beaconData.beaconAdvertisement];
-        
-        [self.lblUuid setStringValue:[beaconData.proximityUUID UUIDString]];
+        [self startBeacon];
+        [self.lblUuid setStringValue:[_uuid UUIDString]];
     }
+}
+
+
+- (void)controlTextDidChange:(NSNotification *)notification{
+    NSLog(@"text change %@", self.lblMajor);
+    [self.lblBroadcasting setHidden:YES];
+    [_manager stopAdvertising];
+    [self startBeacon];
+}
+
+- (void) startBeacon {
+    [self.lblBroadcasting setHidden:NO];
+    
+    uint16_t major = [self.lblMajor stringValue].intValue;
+    uint16_t minor = [self.lblMinor stringValue].intValue;
+    
+    
+    BLCBeaconAdvertisementData *beaconData = [[BLCBeaconAdvertisementData alloc] initWithProximityUUID:_uuid major:major minor:minor measuredPower:-59];
+    
+    [_manager startAdvertising:beaconData.beaconAdvertisement];
 }
 
 @end

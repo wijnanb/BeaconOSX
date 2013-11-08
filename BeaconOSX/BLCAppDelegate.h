@@ -8,9 +8,12 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface BLCAppDelegate : NSObject <NSApplicationDelegate>
+@interface BLCAppDelegate : NSObject <NSApplicationDelegate, NSTextFieldDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
 @property (weak) IBOutlet NSTextField *lblUuid;
+@property (weak) IBOutlet NSTextField *lblMajor;
+@property (weak) IBOutlet NSTextField *lblMinor;
+@property (weak) IBOutlet NSTextField *lblBroadcasting;
 
 @end

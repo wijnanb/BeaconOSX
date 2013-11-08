@@ -14,12 +14,13 @@
     self = [super init];
     
     if (self) {
-        NSString *uuid = @"496E176B-346F-456D-88F1-26D7C2A113AF";
-        self.proximityUUID = [[NSUUID alloc]initWithUUIDString:uuid];
+        self.proximityUUID = proximityUUID;
         self.major = major;
         self.minor = minor;
         self.measuredPower = power;
     }
+    
+    NSLog(@"Sending iBeacon with uuid: %@, major: %d, minor:%d", [proximityUUID UUIDString], major, minor);
     
     return self;
 }

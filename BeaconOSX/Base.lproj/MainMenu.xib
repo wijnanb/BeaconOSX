@@ -658,7 +658,7 @@
                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dge-RJ-uJh">
                         <rect key="frame" x="0.0" y="0.0" width="800" height="400"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="broadcasting" id="Nqh-oj-hqN"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="ibeacon" id="Nqh-oj-hqN"/>
                     </imageView>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fm8-SO-Ars">
                         <rect key="frame" x="-2" y="69" width="455" height="17"/>
@@ -669,11 +669,65 @@
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lWz-6U-Voc">
+                        <rect key="frame" x="113" y="44" width="59" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Building:" id="6ve-ON-qsU">
+                            <font key="font" metaFont="smallSystem"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lSn-XP-LTA">
+                        <rect key="frame" x="245" y="44" width="59" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Room:" id="cXH-5a-wST">
+                            <font key="font" metaFont="smallSystem"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pr3-GF-e5F">
+                        <rect key="frame" x="168" y="43" width="37" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" refusesFirstResponder="YES" allowsUndo="NO" sendsActionOnEndEditing="YES" state="on" focusRingType="none" alignment="center" title="1" drawsBackground="YES" id="hE6-Pa-mw2">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                        </textFieldCell>
+                        <connections>
+                            <outlet property="delegate" destination="494" id="vt6-JX-p9U"/>
+                        </connections>
+                    </textField>
+                    <textField focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NEd-UD-u5c">
+                        <rect key="frame" x="296" y="43" width="37" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" refusesFirstResponder="YES" allowsUndo="NO" sendsActionOnEndEditing="YES" state="on" focusRingType="none" alignment="center" title="1" drawsBackground="YES" id="fph-1v-6k2">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                        </textFieldCell>
+                        <connections>
+                            <outlet property="delegate" destination="494" id="Q6e-7N-kfg"/>
+                        </connections>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DfE-I3-Krz">
+                        <rect key="frame" x="111" y="86" width="229" height="48"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="broadcasting" id="r1g-2T-Jxo">
+                            <font key="font" size="40" name="HelveticaNeue-CondensedBold"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
                 </subviews>
             </view>
         </window>
         <customObject id="494" customClass="BLCAppDelegate">
             <connections>
+                <outlet property="lblBroadcasting" destination="DfE-I3-Krz" id="1y7-Mn-G1G"/>
+                <outlet property="lblMajor" destination="pr3-GF-e5F" id="fyF-t3-mWE"/>
+                <outlet property="lblMinor" destination="NEd-UD-u5c" id="VDY-Uh-ocB"/>
                 <outlet property="lblUuid" destination="Fm8-SO-Ars" id="fLb-4x-Se0"/>
                 <outlet property="window" destination="371" id="532"/>
             </connections>
@@ -681,6 +735,6 @@
         <customObject id="420" customClass="NSFontManager"/>
     </objects>
     <resources>
-        <image name="broadcasting" width="800" height="400"/>
+        <image name="ibeacon" width="800" height="400"/>
     </resources>
 </document>
